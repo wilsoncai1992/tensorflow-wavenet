@@ -287,7 +287,8 @@ def main():
         raise
 
     threads = tf.train.start_queue_runners(sess=sess, coord=coord)
-    reader.start_threads(sess, num_threads=4)
+    # reader.start_threads(sess, num_threads=4)
+    reader.start_threads(sess)
 
     step = None
     last_saved_step = saved_global_step
